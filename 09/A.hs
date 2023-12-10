@@ -26,4 +26,4 @@ predict prev = sum [last i | i<-prev]
 
 main = do
   contents <- readFile "input"
-  return (sum [ predict (process ([[read n ::Int |n<-(strSplit " " line) ]]))| line<-(strSplit "\n" contents), length line > 0 ])
+  print (sum [ predict (process ([[read n ::Int |n<-(strSplit " " line) ]]))| line<-(strSplit "\n" contents), length line > 0 ])
